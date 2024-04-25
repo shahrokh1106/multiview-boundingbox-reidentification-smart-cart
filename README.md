@@ -14,3 +14,15 @@ A sample result from the main  multi-view multi-object bounding-box re-identific
 
 An example of using epipolar constraint when the bounding boxes are matched vs when we have unmatched bounding boxes the main  multi-view multi-object bounding-box re-identification algorithm:
 ![epipolar](https://github.com/shahrokh1106/multiview-boundingbox-reidentification-smart-cart/assets/44213732/e8805a16-3578-4bf1-ba91-25990e6bba99)
+
+To run the main algorithm on a sample from the dataset, run "BBoxMatchingMobNet.py", where
+
+* *--height* is height of the input images which must match the calibration setup (320)
+* *--width* is width of the input images which must match the calibration setup (320)
+* *--eppipolar* determines if the algorithm should use eppipolar constraints or not 
+* *--embedding* determines if the algorithm should use the pretrained embedding model or not 
+* *--embedpath* determines the path of the embedding model trained based on an triplet-loss function on a dataset of triple images (anchor, positive, and negative)
+* *--calibpath* is a list of three string paths that indicates the location of json calib files for cam0, cam1, and cam2 respectively
+* *--boxscaling* is an integer that indicates the required scaling when getting a bounding box feature vector from a feature map. Based on current set-up it must be 8
+* *--show* is to  show the results. If it is True opencv will be imported to show the images and bounding boxes
+* *--showepi* is to show the epipolar lines at each step. If it is True opencv will be imported to show the images, bounding boxes, and lines
