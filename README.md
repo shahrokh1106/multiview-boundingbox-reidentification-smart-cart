@@ -11,7 +11,7 @@
 The main algorithm iterates all possible triple combinations of bounding boxes to find a set of bounding boxes with minimum cost. Such a cost is computed by epipolar geometry constraint and cosine similarity between feature embedding belonging to the bounding boxes. <br/>
 * Epipolar constraint: Given the center of a bounding box in one view, the center of the matched bounding box in the other way is expected to be on the corresponding epipolar line. The cost is computed based on the distance from the lines.
 * Embedding constraint: Given a bounding box in from a camera view, its feature embedding could be captured in two ways: 1) getting the corresponding features from the backbone of MobileNet, 2) getting the corresponding features from a trained model. The current setup is based on the second approach.
-  * h
+  * A CNN was trained on the extracted features from the backbone of MobileNet based on triplet-loss function. Each sample in the dataset consists of three elements: Anchor, Positive, and Negative. Anchor is the source bounding box, Positive is a true match, and Negative is a false match. The triplet-loss function ensures a small distance between matched bounding boxes and a large distance between the unmatched ones. </br>
 
 A sample result from the main  multi-view multi-object bounding-box re-identification algorithm in the presence of noise (inaccurate bounding boxes detected by an object detection model):
 
