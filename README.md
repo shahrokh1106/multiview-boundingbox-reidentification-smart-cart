@@ -8,6 +8,11 @@
 * End-to-end Multi-View Bounding Box Re-Identification algorithm: Developing a multi-object multi-camera bounding box re-identification algorithm, integrating the trained Siamese network with epipolar constraints to enable accurate and efficient object re-identification across different camera views
 * Deployment Automation: Implementing deployment automation solutions using C++ for Edge-TPU Coral and Raspberry Pi platforms, optimizing inference performance and resource utilization for real-time application deployment at the edge.
 
+The main algorithm iterates all possible triple combinations of bounding boxes to find a set of bounding boxes with minimum cost. Such a cost is computed by epipolar geometry constraint and cosine similarity between feature embedding belonging to the bounding boxes. <br/>
+* Epipolar constraint: Given the center of a bounding box in one view, the center of the matched bounding box in the other way is expected to be on the corresponding epipolar line. The cost is computed based on the distance from the lines.
+* Embedding constraint: Given a bounding box in from a camera view, its feature embedding could be captured in two ways: 1) getting the corresponding features from the backbone of MobileNet, 2) getting the corresponding features from a trained model. The current setup is based on the second approach.
+  * h
+
 A sample result from the main  multi-view multi-object bounding-box re-identification algorithm in the presence of noise (inaccurate bounding boxes detected by an object detection model):
 
 ![results](https://github.com/shahrokh1106/multiview-boundingbox-reidentification-smart-cart/assets/44213732/bbae13c3-cb97-45a1-afea-bcfb479d0ecd)
