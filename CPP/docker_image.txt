@@ -1,0 +1,1 @@
+docker pull gcr.io/imagr-ml-pipeline-development/imagr_brokers_raspberry_4b_micro_broker:47cf95fcb6
