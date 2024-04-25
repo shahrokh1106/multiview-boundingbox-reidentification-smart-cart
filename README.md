@@ -1,6 +1,6 @@
 # Multi-view bounding-box re-identification in a three-camera system installed in a shopping cart
 
-* Dataset Management: A dataset of images captured by a three-camera system installed inside a smart shopping
+* Dataset: A dataset of images captured by a three-camera system installed inside a smart shopping
 * Camera Calibration: Implementing the Tsai method for camera calibration, ensuring accurate geometric calibration of the camera system to correct lens distortion and intrinsic parameters
 * Epipolar Geometry Pipeline: Developing an epipolar geometry pipeline based on fundamental and essential matrices
 * 3D Localization Estimation: Designing and implementing an approach for 3D localization estimation without computing a depth map, leveraging geometric constraints and feature triangulation techniques
